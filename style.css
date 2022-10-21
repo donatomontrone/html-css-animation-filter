@@ -2,42 +2,148 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    transition: 2s;
 }
+/* Soluzione Esercizio 1 */
+
+.ex-1-square:hover{
+    background-color: red;
+}
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 2s;
 }
+
+/* Soluzione esercizio 2 */
+.ex-2-square:active{
+    width: 100%;
+}
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 1s;
 }
+
+/* Soluzione esercizio 3 */
+.ex-3-square:hover {
+    border: none;
+    border-radius: 100%;
+}
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 1s;
 }
+
+/* Soluzione esercizio 4 */
+
+.ex-4-square:hover{
+    opacity: 0;
+
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: 1s;
 }
+
+/* Soluzione esercizio 5  */
+
+.ex-5-square:hover{
+    transform: scale(2);
+}
+
+.ex-5-square:active{
+    transform: scale(0.5)
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-7-img, .ex-8-img {
+    transition: 1s;
+}
+
+/* Soluzione esercizio 6 */
+
+.ex-6-img:hover{
+    filter: grayscale(100%);
+}
+
+/* Soluzione esercizio 7 */
+
+.ex-7-img:hover{
+    filter: sepia(50%);
+}
+
+/* Soluzione esercizio 8 */
+
+.ex-8-img:hover{
+    filter: sepia(70%);
+    border-radius: 2rem;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 2s;
 }
+
+/* Soluzione esercizio 9 */
+
+.ex-9-img:hover{
+    filter: grayscale(70%);
+    transform: scale(1.5);
+    border-radius: 2.5rem;
+
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation: rotate 1s linear infinite;
 }
+
+/* Soluzione esercizio 10 */
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(1turn);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+/* Soluzione esercizio 11 */
+.ex-11-icon:hover {
+    animation: rotate-stop 2s ease-out;
+}
+
+@keyframes rotate-stop{
+    0% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -66,4 +172,91 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* Soluzione esercizio 12 */
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: top-white 2s linear;
+}
+@keyframes top-white {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: 65%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: bottom-white 20s linear;
+}
+@keyframes bottom-white {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: 65%;
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+/* Soluzione esercizio 13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: rotate-top-white 2s linear;
+}
+@keyframes rotate-top-white {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    25% {
+        left: 100%;
+        top: -10px;
+    }
+    50% {
+        left: 100%;
+        top: 90%;
+    }
+    75% {
+        left: 0;
+        top: 90%;
+    }
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: rotate-bottom-white 2s linear;
+}
+
+@keyframes rotate-bottom-white {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    25% {
+        right: 75%;
+        bottom: -10%;
+    }
+    50% {
+        right: 75%;
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 95%;
+    }
+    100% {
+        bottom: -10px;
+        right: -10%;
+    }
 }
